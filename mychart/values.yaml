@@ -2,7 +2,7 @@ deployment:
   apeksContainer:
     image:
       repository: hub.comcast.net/pps-tie-db/op7app/apeks-image
-      tag: new
+      tag: v1
     resources:
       limits:
         cpu: 500m
