@@ -1,0 +1,20 @@
+deployment:
+  apeksContainer:
+    image:
+      repository: hub.comcast.net/pps-tie-db/op7app/apeks-image
+      tag: latest
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 256Mi
+  replicas: 1
+kubernetesClusterDomain: cluster.local
+service:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: http
+  type: NodePort
